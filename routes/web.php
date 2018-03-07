@@ -19,3 +19,8 @@ Route::get('/', function () {
 Route::get('/hello', function () {
     return view('hello');
 });
+
+
+Route::get('/Me1234', function () {
+    return view('It_me');
+});
