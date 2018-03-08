@@ -24,3 +24,46 @@ Route::get('/hello', function () {
 Route::get('/Me1234', function () {
     return view('It_me');
 });
+
+
+Route::get('/main1234', function () {
+    return view('layouts.main');
+});
+
+Route::get('/page1', function () {
+    $array = [
+
+        "NAME" =>"",
+        "ID"=>"",
+        "SEX"=>"",
+        "AGE"=>""
+    
+       ];
+    return view('page.page1',$array);
+});
+Route::get('/page2', function () {
+    return view('page.page2');
+});
+Route::get('/page3', function () {
+    return view('page.page3');
+});
+
+Route::get('/page4', function () {
+    return view('page.page4');
+});
+
+
+
+Route::post('/page','PageController@show');
+
+
+Route::get('/page10/{ID}', function ($id) {
+
+    $array = [
+        "ID" => $id
+
+
+
+    ];
+    return view('page.page10',$array);
+});
