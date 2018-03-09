@@ -36,7 +36,8 @@ Route::get('/page1', function () {
         "NAME" =>"",
         "ID"=>"",
         "SEX"=>"",
-        "AGE"=>""
+        "AGE"=>"",
+        "PASSWORD"=>""
     
        ];
     return view('page.page1',$array);
@@ -61,9 +62,35 @@ Route::get('/page10/{ID}', function ($id) {
 
     $array = [
         "ID" => $id
-
+ 
 
 
     ];
     return view('page.page10',$array);
+});
+
+
+Route::get('/page11', function () {
+    $array2 = [
+
+        "NAMEP" =>"",
+        "PASSWORDP"=>"",
+        "SELECTP"=>"",
+        "TEXTAREAP"=>""
+    
+       ];
+    return view('page.page11',$array2);
+});
+
+Route::post('/page11','PageController@show_p3');
+
+
+
+Route::get('/form_register', function () {
+    return view('page.form_register');
+});
+
+
+Route::get('/form_login', function () {
+    return view('page.form_login');
 });

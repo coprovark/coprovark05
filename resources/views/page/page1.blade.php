@@ -18,6 +18,7 @@
     
     
     ชื่อ : <input type="text" name="name"> 
+    รหัส : <input type="password" name="password"> 
     <input type="hidden" name="hidden" value="1001"> <br>
 
     <input type="submit" value="ส่งค่า">
@@ -30,6 +31,7 @@
 
 <h2>แสดงค่า</h2>
 ชื่อ = {{ $NAME }} 
+รหัส = {{ $PASSWORD }} 
 ID = {{ $ID}} 
 เพศ = {{ $SEX }} 
 อายุ = {{ $AGE }} 
