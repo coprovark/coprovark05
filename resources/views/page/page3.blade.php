@@ -21,7 +21,7 @@
             <option value="6">6</option>
             </select>    <br>
 
-            <textarea name"Textareap3"></textarea>
+            <textarea name="textarea_p3"></textarea>
  
      <input type="submit" value="ส่งค่า">
  

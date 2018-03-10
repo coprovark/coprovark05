@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Page;
+use App\loginpage01;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -46,13 +47,13 @@ class PageController extends Controller
 
 
 
-    public function show_p3 (Request $request)
+    public function show_p3 (Request $request1)
     {
 
-        $namep3 = $request->input('name_p3');
-        $passwordp3 = $request->input('password_p3');
-        $selectp3 = $request->input('select_p3');
-        $Textareap3 = $request->input('Textareap3');
+        $namep3 = $request1->input('name_p3');
+        $passwordp3 = $request1->input('password_p3');
+        $selectp3 = $request1->input('select_p3');
+        $Textareap3 = $request1->input('textarea_p3');
 
         $array2 = [
 
@@ -68,5 +69,81 @@ class PageController extends Controller
 
 
         return view('page.page11',$array2);
+ 
     }
+
+
+    public function loginback (Request $gologin)
+    {
+
+        $nameloginay = $gologin->input('userlogin');
+        $passwordloginay = $gologin->input('passwordlogin');
+
+         $arraylogin = [
+
+           "loginserve1" =>$nameloginay,
+           
+            
+             
+           ];   
+        
+
+
+        if($nameloginay=="watercat"&& $passwordloginay=="123456789"){
+
+            $loginserve="True";
+
+           
+
+
+
+        }
+        else{
+
+            $loginserve="false";
+
+
+
+        }
+
+     
+        $arraylogin = [
+
+            "loginserve1" => $loginserve          
+             
+              
+            ];  
+            
+            
+        return view('page.form_login',$arraylogin);
+       
+
+
+
+        
+ 
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

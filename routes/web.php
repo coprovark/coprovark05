@@ -92,5 +92,15 @@ Route::get('/form_register', function () {
 
 
 Route::get('/form_login', function () {
-    return view('page.form_login');
+
+    $arraylogin = [
+
+        "loginserve1" => ""          
+         
+          
+        ];  
+    return view('page.form_login',  $arraylogin);
 });
+
+
+Route::post('/loginpage01','PageController@loginback');
