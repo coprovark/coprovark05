@@ -21,37 +21,37 @@ Route::get('/hello', function () {
 });
 
 
-Route::get('/Me1234', function () {
-    return view('It_me');
-});
+// Route::get('/Me1234', function () {
+//     return view('It_me');
+// });
 
 
-Route::get('/main1234', function () {
-    return view('layouts.main');
-});
+// Route::get('/main1234', function () {
+//     return view('layouts.main');
+// });
 
-Route::get('/page1', function () {
-    $array = [
+// Route::get('/page1', function () {
+//     $array = [
 
-        "NAME" =>"",
-        "ID"=>"",
-        "SEX"=>"",
-        "AGE"=>"",
-        "PASSWORD"=>""
+//         "NAME" =>"",
+//         "ID"=>"",
+//         "SEX"=>"",
+//         "AGE"=>"",
+//         "PASSWORD"=>""
     
-       ];
-    return view('page.page1',$array);
-});
-Route::get('/page2', function () {
-    return view('page.page2');
-});
-Route::get('/page3', function () {
-    return view('page.page3');
-});
+//        ];
+//     return view('page.page1',$array);
+// });
+// Route::get('/page2', function () {
+//     return view('page.page2');
+// });
+// Route::get('/page3', function () {
+//     return view('page.page3');
+// });
 
-Route::get('/page4', function () {
-    return view('page.page4');
-});
+// Route::get('/page4', function () {
+//     return view('page.page4');
+// });
 
 
 
@@ -93,14 +93,59 @@ Route::get('/form_register', function () {
 
 Route::get('/form_login', function () {
 
-    $arraylogin = [
-
-        "loginserve1" => ""          
-         
-          
-        ];  
+        
+        $data = [
+            'users' => []
+            
+                ];
     return view('page.form_login',  $arraylogin);
 });
 
 
 Route::post('/loginpage01','PageController@loginback');
+
+//--------------------------------------------------------------
+
+ Route::get('/form_login', function () {
+    $data = ['users' => []    ];
+
+    return view('page.form_login',$data);
+ });
+
+Route::post('/form_login','PageController@loginback');
+
+
+
+//***************************************** */
+
+Route::get('/form_login2', function () {
+    $data2 = ['username' => '' ,
+              'name' =>''    ];
+
+    return view('page.form_login',$data2);
+ });
+
+Route::post('/form_login2','PageController@loginback2');
+
+// -*-*-*-*-*-*-*-*-*-*-*-*-*--**-*-*
+Route::get('/list_users', function () {
+   
+              return view('page.list_users');
+            });
+Route::get('/list_users','UsersController@list_users' );
+
+
+
+
+
+
+Route::get('delete_user/{id}', function ($id) {
+    return 'User ='.$id;
+});
+Route::get('delete_user/{id}','UsersController@delete_users' );
+
+
+Route::post('form_register_save','UsersController@form_register_save' );
+
+Route::get('/list_users','UsersController@list_users' );
+Route::post('/list_users_find','UsersController@list_users_find' );

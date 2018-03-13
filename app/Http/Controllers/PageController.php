@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Page;
-use App\loginpage01;
+//use App\loginpage01;
+
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class PageController extends Controller
 {
@@ -79,50 +81,62 @@ class PageController extends Controller
         $nameloginay = $gologin->input('userlogin');
         $passwordloginay = $gologin->input('passwordlogin');
 
-         $arraylogin = [
-
-           "loginserve1" =>$nameloginay,
-           
-            
-             
-           ];   
+         
         
-
-
-        if($nameloginay=="watercat"&& $passwordloginay=="123456789"){
-
-            $loginserve="True";
-
+           $datausers = DB::select('select * from users where username = ? and password = ?', 
+           [$gologin['userlogin'] , $gologin['passwordlogin']] );
            
+   
+         
 
+//เงื่อนไข login
+      foreach($datausers as $value){
+            if($nameloginay==$value->username && $passwordloginay==$value->password){
 
+             $data['status'] = "ture";    
 
         }
-        else{
-
-            $loginserve="false";
-
-
-
-        }
-
-     
-        $arraylogin = [
-
-            "loginserve1" => $loginserve          
-             
-              
-            ];  
-            
-            
-        return view('page.form_login',$arraylogin);
        
-
-
-
-        
- 
     }
+        return view('page.form_login',['users'=>$datausers]);
+            
+       //จบ login 1
+      
+      
+     }
+
+
+//   public function loginpage01 (Request $res) {
+
+//         $datausers = DB::select('select * from users where username = ? and password = ?', 
+//         [$res['userlogin'] , $res['passwordlogin']] );
+        
+
+//         return view('page.loginback',['users'=>$datausers]);
+
+//     }
+
+
+public function loginback2 (Request $comelogin){
+
+             $users = DB::table('users')->where([
+                 ['username','=',$comelogin['username']],
+                 ['password','=',$comelogin['password']]                
+                ])->get();
+                $name = '';
+                
+                foreach($users as $value){
+                        $name = $value->id;
+
+
+                }
+                    $comelogin['name'] = $name;
+            return view('page.form_login',$comelogin);
+
+
+
+
+}
 
 
 

@@ -76,7 +76,10 @@
                             <a href="/form_register"><i class="fa fa-table fa-fw"></i> Register</a>
                         </li>
                         <li>
-                            <a href="form_login"><i class="fa fa-table fa-fw"></i> Login</a>
+                            <a href="/form_login"><i class="fa fa-table fa-fw"></i> Login</a>
+                        </li>
+                        <li>
+                            <a href="/list_users"><i class="fa fa-table fa-fw"></i> สมาชิก</a>
                         </li>
                     </ul>
                 </div>

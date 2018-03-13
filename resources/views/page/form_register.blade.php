@@ -3,31 +3,11 @@
        
        
                         
-                        <form class="form-inline">
-                                <div class="form-group">
-                                        <label for="exampleName">ชื่อสกุล</label>
-                                        <select id="onname" class="form-control" >
-                                              <option value = "นาย">นาย</option> 
-                                              <option value = "นางสาว">นางสาว</option> 
-                                              <option value = "นาง">นาง</option> 
-                                              <option value = "เด็กชาย">ด.ช.</option> 
-                                              <option value = "เด็กหญิง">ด.ญ.</option> 
-                                              </select>
-                                      <input type="text" class="form-control"  id="examplesex" placeholder="ชื่อ-สกุล"> <br><br>
-                                      <label for="examplesex" >เพศ</label>
-                                      <select id="sex"  class="form-control">
-                                              <option value = "นาย">ชาย</option> 
-                                              <option value = "นางสาว">หญิง</option> 
-                                              </select> <br><br>
-                                   
-                                   
-                                   
-                                </div>
-                        </form>
+                       
 
 
                         
-                        <form>
+                        <!-- <form>
                             <div class="form-group">
                               
                             
@@ -153,26 +133,52 @@
                                             <option value="อุบลราชธานี">อุบลราชธานี</option>
                                             <option value="อ่างทอง">อ่างทอง </option>
                                             
-                                      </select><br><br>
+                                      </select><br><br> -->
 
-                                      <label for="exampleuser">USER</label>
-                                      <input type="text" class="form-control" id="USER" placeholder="Username"> <br>
-                                
-                                      <label for="examplepassword">password</label>
-                                      <input type="password" class="form-control" id="Password" placeholder="Password"> <br>
-                                      <label for="examplerepassword">repassword</label>
-                                      <input type="password" class="form-control" id="RePassword" placeholder="RePassword"> <br>
-                                
-                                
+                             
+                             
+                              
                                 </div>
                                
                            
-                            <button type="submit" class="btn btn-default">Submit</button>
-
-
-                           <br><br> <button type="reset" class="btn btn-default">Reset</button>
+                          
 
 
                           </form>
+
+                           <form class="form-inline" action="/form_register_save" method = "post">
+                                <div class="form-group">
+                                <label for="exampleID">ID</label> <br>
+                                      <input type="number" class="form-control" name="ID" placeholder="ID"> <br>
+                                <br>
+                                <label for="exampleuser">USER</label> <br>
+                                      <input type="text" class="form-control" name="USERNAME" placeholder="Username"> <br>
+                                <br>
+                                      <label for="examplepassword">password</label> <br>
+                                      <input type="password" class="form-control" name="PASSWORD" >
+                                       <br>
+                                     
+                                
+
+
+                                   <br>   <label for="examplesex" >สถานะ</label> <br>
+                                      <select name="STATUS"  class="form-control">
+                                              <option value = "1">โสด</option> 
+                                              <option value = "2">แต่งงาน</option> 
+                                              <option value = "3">ม่าย</option> 
+                                              </select> <br><br>
+
+
+                                   <br> <br> <button type="submit" class="btn btn-default">Submit</button>
+
+
+                                    <br><br> <button type="reset" class="btn btn-default">Reset</button>
+                                   
+                                   
+                                </div>
+
+
+                                
+                        </form>
 
 @endsection
