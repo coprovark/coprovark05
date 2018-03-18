@@ -124,8 +124,8 @@
                     <div class="row">
                        <div class="col-md-2">  <label for="B_date"><b>วัน/เดือน/ปี เกิด</b></label></div>
                        <div class="col-md-3"> <input type="date" class="form-control"  name="Date_S" id="Date_S" onchange="date1()" placeholder="วว/ดด/ปปปป">  </div>
-                       <div class="col-md-2"> <div class="panel panel-default"><div class="panel-body">  <label for="B_date"><b>อายุ</b>&emsp; <b id="FBday" >โปรดกรอกวันเกิด</b> </label></div></div></div>
-                       <div class="col-md-5">   </div>
+                       <div class="col-md-3"> <div class="panel panel-default"><div class="panel-body">  <label for="B_date"><b>อายุ</b>&emsp; <b id="FBday" >โปรดกรอกวันเกิด</b> </label></div></div></div>
+                       <div class="col-md-4"></div>
                       
                     </div> <br><br>
                    
@@ -214,13 +214,13 @@
 
 
                     <div class="row">
-                            <div class="col-md-2">    <button type="submit" class="btn btn-success"><span class ="glyphicon glyphicon-ok">บันทึก</span></button>&emsp;&emsp;
+                            <div class="col-md-12">    <button type="submit" class="btn btn-success"><span class ="glyphicon glyphicon-ok">บันทึก</span></button>&emsp;&emsp;
                                                       <a href = "/list_users" class="btn btn-danger" >  <span class ="glyphicon glyphicon-remove" >ยกเลิก</span></a>
 
  
 
                              </div>
-                       <div class="col-md-10">   </div>
+                       <!-- <div class="col-md-10">   </div> -->
                       
                     </div> 
                      

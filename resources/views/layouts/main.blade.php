@@ -73,13 +73,13 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="/form_register"><i class="fa fa-table fa-fw"></i> Register</a>
+                            <a href="/show_reg"><i class="fa fa-table fa-fw"></i> Register</a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="/form_login"><i class="fa fa-table fa-fw"></i> Login</a>
-                        </li>
+                        </li> -->
                         <li>
-                            <a href="/list_users"><i class="fa fa-table fa-fw"></i> สมาชิก</a>
+                            <a href="/show_list"><i class="fa fa-table fa-fw"></i> สมาชิก</a>
                         </li>
                     </ul>
                 </div>
