@@ -149,3 +149,19 @@ Route::post('form_register_save','UsersController@form_register_save' );
 
 Route::get('/list_users','UsersController@list_users' );
 Route::post('/list_users_find','UsersController@list_users_find' );
+
+
+// --HomeWork01-19/3/61 Sc--
+
+Route::get('/show_reg', function () { return view('page.show_reg');  });
+
+Route::post('show_reg_save','UsersController@show_reg_save' );
+
+Route::get('/show_list','UsersController@show_list_u' );
+
+ Route::get('show_delete_user/{sid}', function ($sid) {
+    return 'User ='.$sid;
+ });
+Route::get('show_delete_user/{sid}','UsersController@show_list_delete_users' );
+
+Route::post('/show_list_find','UsersController@show_list_u_find' );

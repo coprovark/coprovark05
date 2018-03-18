@@ -8,16 +8,18 @@ use Illuminate\Http\Request;
 
 class UsersController extends Controller
 {
-    public function list_users()
+    public function list_users() //แสดง
     {
 
         $find ='';
-        $users = DB::table('users')->select('*')->get();
+        $users = DB::table('users')
+        ->select('*')
+        ->get();
        return view('page.list_users',['datalist'=>$users,
                                       'find'=>$find]);
     }
 
-    public function list_users_find(Request $sc)
+    public function list_users_find(Request $sc)  //ค้นหา
     {
         $find =$sc ->find;
         $users = DB::table('users')
@@ -29,11 +31,6 @@ class UsersController extends Controller
         
     }
     
-
-
-
-
-
 
     public function delete_users($id){
 
@@ -61,6 +58,91 @@ class UsersController extends Controller
 
 
     }
+
+    public function show_reg_save(Request $register){
+
+        
+                 $register->L_food1 +=0;
+           
+        
+                 $register->L_food2 +=0;
+            
+       
+                 $register->L_food3 +=0;
+            
+        
+                 $register->L_food4 +=0;
+            
+       
+      
+if ($register->ID_S!="" and $register->On_name!="" and $register->Nameands_S!="" and $register->Gender_S!="" and $register->Date_S!="" and $register->Fac_S!="" and $register->major_s!="" and $register->Address_S!="" and $register->Number_S!="" and $register->User_S!="" and $register->Password_S!=""){
+        $status = DB::table('coprovark_05')->insert(
+         [
+           'sid'        => $register->ID_S,
+           'titleName'  => $register->On_name,
+           'fullName'   => $register->Nameands_S,
+           'gender'     => $register->Gender_S,
+           'birthDay'   => $register->Date_S,
+           'facultyID'  => $register->Fac_S,
+           'majorID'    => $register->major_s,
+           'address'    => $register->Address_S,
+           'mobile'     => $register->Number_S,
+           'food1'      => $register->L_food1,
+           'food2'      => $register->L_food2,
+           'food3'      => $register->L_food3,
+           'food4'      => $register->L_food4,           
+           'username'   => $register->User_S,
+           'password'   => $register->Password_S
+         ]
+       );		
+       
+    }
+    else{
+
+        return redirect('show_reg');
+    }
+
+        
+       return redirect('show_list');
+ 
+ 
+     }
+
+
+     public function show_list_u() //แสดง
+     {
+ 
+         $find ='';
+         $users = DB::table('coprovark_05')
+         ->select('*')
+         ->get();
+        return view('page.show_list',['datalist'=>$users,
+                                       'find'=>$find]);
+     }
+ 
+     public function show_list_u_find(Request $sc)  //ค้นหา
+     {
+         $find =$sc ->find;
+         $users = DB::table('coprovark_05')
+                      ->select('*')
+                      ->where('sid','LIKE','%'.$find.'%')
+                      ->get();
+        return view('page.show_list',['datalist'=>$users,
+                                       'find'=>$find]);
+         
+     }
+     
+ 
+     public function show_list_delete_users($sid){
+ 
+         DB::table('coprovark_05')->where('sid', '=', $sid)->delete();
+        
+         return redirect('show_list');
+ 
+ 
+     }
+
+
 }
 
 
