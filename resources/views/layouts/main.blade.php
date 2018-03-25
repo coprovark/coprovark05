@@ -11,18 +11,17 @@
 
     <title>webapp</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+         <!-- Bootstrap Core CSS -->
+         <link rel="stylesheet" href="{{ URL::asset('asset/css/bootstrap/css/bootstrap.min.css') }}">
 
-    <!-- MetisMenu CSS -->
-    <link href="css/metisMenu/metisMenu.min.css" rel="stylesheet">
+        <!-- MetisMenu CSS -->
+        <link rel="stylesheet" href="{{ URL::asset('asset/css/metisMenu/metisMenu.min.css') }}">
 
-    <!-- Custom CSS -->
-    <link href="css/sb-admin-2.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="{{ URL::asset('asset/css/sb-admin-2.css') }}">
 
-    <!-- Custom Fonts -->
-    <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
+        <!-- Custom Fonts -->
+        <link rel="stylesheet" href="{{ URL::asset('asset/css/font-awesome/css/font-awesome.min.css') }}">
 
 </head>
 
@@ -39,7 +38,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
+                <a class="navbar-brand" href="index.html">น้ำแมว \(<_>)</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -61,16 +60,44 @@
                             <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> ข้อมูลพื้นฐาน<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="flot.html">Flot Charts</a>
+                                    <a href="co_list">กำหนดผู้ใช้งาน</a>
                                 </li>
                                 <li>
-                                    <a href="morris.html">Morris.js Charts</a>
+                                    <a href="co_title">คำนำหน้าชื่อ </a>
                                 </li>
+                                <li>
+                                    <a href="co_status">สถานภาพ </a>
+                                </li>
+                                <li>
+                                    <a href="co_nation">เชื้อชาติ</a>
+                                </li>
+                                <li>
+                                    <a href="co_race">สัญชาติ</a>
+                                </li>
+                                <li>
+                                    <a href="co_religion">ศาสนา</a>
+                                </li>
+                                <li>
+                                    <a href="co_category">ประเภทนักศึกษา</a>
+                                </li>
+                                <li>
+                                    <a href="co_faculty">คณะ</a>
+                                </li>
+                                <li>
+                                    <a href="co_mojor">สาขาวิชา</a>
+                                </li>
+                                <li>
+                                    <a href="co_institute">สถาบันการศึกษา</a>
+                                </li>
+
                             </ul>
                             <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="/M_co_resume"><i class="fa fa-table fa-fw"></i>ใบสมัครงาน</a>
                         </li>
                         <li>
                             <a href="/show_reg"><i class="fa fa-table fa-fw"></i> Register</a>
@@ -80,6 +107,9 @@
                         </li> -->
                         <li>
                             <a href="/show_list"><i class="fa fa-table fa-fw"></i> สมาชิก</a>
+                        </li>
+                        <li>
+                            <a href="/co_reg"><i class="fa fa-table fa-fw"></i> บันทึกข้อมูลผู้ใช้</a>
                         </li>
                     </ul>
                 </div>

@@ -34,9 +34,9 @@
    <td>{{ $alldata->birthDay}} </td>
    <td>{{ $alldata->facultyID}} </td> 
     <td> <button class="btn btn-danger" onclick="return _confirm('{{ $alldata->sid}}')"><span class ="glyphicon glyphicon-trash"></span>ลบรายการ</button>
-         <button class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span>แก้ไข</button>
+         <a href="/list_user_edit/{{ $alldata->id }}" class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span>แก้ไข</a>
    </td> 
- 
+   
    
 </tr> 
 @endforeach

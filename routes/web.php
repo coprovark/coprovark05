@@ -165,3 +165,52 @@ Route::get('/show_list','UsersController@show_list_u' );
 Route::get('show_delete_user/{sid}','UsersController@show_list_delete_users' );
 
 Route::post('/show_list_find','UsersController@show_list_u_find' );
+
+
+Route::get('/list_user_edit/{id}','UsersController@list_user_edit');  //<<<<
+
+Route::post('/list_user_update','UsersController@list_user_update');
+
+// ---------work3-21/3/61----------------
+
+Route::get('/co_list', function () { return view('page.coprovark_begin.user');  });
+Route::get('/co_reg', function () { return view('page.coprovark_begin.co_reg');  });
+//---user--
+
+Route::get('/co_title', function () { return view('page.coprovark_begin.co_title');  });
+Route::get('/co_title_reg', function () { return view('page.coprovark_begin.co_title_reg');  });
+//---title--
+
+Route::get('/co_status', function () { return view('page.coprovark_begin.co_status');  });
+Route::get('/co_status_reg', function () { return view('page.coprovark_begin.co_status_reg');  });
+//---status--
+
+Route::get('/co_nation', function () { return view('page.coprovark_begin.co_nation');  });
+Route::get('/co_nation_reg', function () { return view('page.coprovark_begin.co_nation_reg');  });
+//---nation--
+
+Route::get('/co_race', function () { return view('page.coprovark_begin.co_race');  });
+Route::get('/co_race_reg', function () { return view('page.coprovark_begin.co_race_reg');  });
+//---race--
+
+Route::get('/co_religion', function () { return view('page.coprovark_begin.co_religion');  });
+Route::get('/co_religion_reg', function () { return view('page.coprovark_begin.co_religion_reg');  });
+//---religion--
+
+Route::get('/co_category', function () { return view('page.coprovark_begin.co_category');  });
+Route::get('/co_category_reg', function () { return view('page.coprovark_begin.co_category_reg');  });
+//---category--
+
+Route::get('/co_faculty', function () { return view('page.coprovark_begin.co_faculty');  });
+Route::get('/co_faculty_reg', function () { return view('page.coprovark_begin.co_faculty_reg');  });
+//---faculty--
+
+Route::get('/co_mojor', function () { return view('page.coprovark_begin.co_mojor');  });
+Route::get('/co_mojor_reg', function () { return view('page.coprovark_begin.co_mojor_reg');  });
+//---mojor--
+
+Route::get('/co_institute', function () { return view('page.coprovark_begin.co_institute');  });
+Route::get('/co_institute_reg', function () { return view('page.coprovark_begin.co_institute_reg');  });
+//---institute--
+
+Route::get('/M_co_resume', function () { return view('page.coprovark_begin.M_co_resume');  });

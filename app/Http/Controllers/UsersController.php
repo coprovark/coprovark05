@@ -143,6 +143,36 @@ if ($register->ID_S!="" and $register->On_name!="" and $register->Nameands_S!=""
      }
 
 
+    //แก้ไข user
+    public function list_user_edit(Request $req){
+        $find = $req->id;
+        $user = DB::table('coprovark_05')
+                         ->select('*')
+                         ->where('id','=',$find)
+                         ->get();
+        return view('page.show_edit',[
+                'user'=>$user
+        ]);
+    }
+
+    public function list_user_update(Request $req1){
+       
+        $user_code      = $req1->user_code;
+        $user_name      = $req1->user_name;
+        $user_password  = $req1->user_password;
+        $data = [
+            'username'=>$user_name,
+            'password'=>$user_password,
+        ];
+        $status = DB::table('coprovark_05')
+                    ->where('sid', $user_code)
+                    ->update($data);
+        return redirect('show_list');
+    }
+
+
+
+
 }
 
 
