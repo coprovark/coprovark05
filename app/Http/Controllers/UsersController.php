@@ -170,7 +170,36 @@ if ($register->ID_S!="" and $register->On_name!="" and $register->Nameands_S!=""
         return redirect('show_list');
     }
 
+    
 
+
+    public function M_co_save(Request $register){
+
+       
+$status = DB::table('resume')->insert(
+[
+  'sid'        => $register->ID_S,
+  'titleName'  => $register->On_name,
+  'fullName'   => $register->Nameands_S,
+  'gender'     => $register->Gender_S,
+  'birthDay'   => $register->Date_S,
+  'facultyID'  => $register->Fac_S,
+  'majorID'    => $register->major_s,
+  'address'    => $register->Address_S,
+  'mobile'     => $register->Number_S,
+  'food1'      => $register->L_food1,
+  'food2'      => $register->L_food2,
+  'food3'      => $register->L_food3,
+  'food4'      => $register->L_food4,           
+  'username'   => $register->User_S,
+  'password'   => $register->Password_S
+]);		
+
+
+return redirect('show_list');
+
+
+        }
 
 
 }

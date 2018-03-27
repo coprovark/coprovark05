@@ -89,20 +89,28 @@
 
 </script>
 
-
+<form action="/M_co_save" method ="post" class = "form-inline">
 <div class="panel panel-default">
   <div class="panel-body">
 
    <div class="container-fluid">
   
   <div class="row">
-     <div class="col-md-3"> <b> CO-PROVARK</b>
-                            <br>เลขที่ No.
-                            <br>วันที่ Date.            
+     <div class="col-md-3"> <b> CO-PROVARK</b><br><br>
+     <div class="row">
+     <div class="col-md-5">เลขที่ No.</div>
+      <div class="col-md-7"><input type="text" name ="on_U" value = "" class = "form-control"></div></div> <br>
+  <div class="row">
+      <div class="col-md-5">วันที่ Date.</div> 
+      <div class="col-md-7"><input type="text" name ="date_U" value = "" class = "form-control"> </div></div>          
                     
         </label></div>
-     <div class="col-md-6">ใบสมัครเข้าร่วมโครงการ   </div>
-     <div class="col-md-3">  </div>
+     <div class="col-md-7"><p class="text-center">ใบสมัครเข้าร่วมโครงการ </p> <br>
+                           <textarea class="form-control" name = "co_textarea" rows="3" cols="100" ></textarea>                                                 
+                                                                             </div>
+     <div class="col-md-2"> 
+     <img src="https://scontent.fbkk5-1.fna.fbcdn.net/v/t1.0-9/24232728_1680045372058373_2189792765819063358_n.jpg?_nc_cat=0&_nc_eui2=v1%3AAeEThG76a5f3jLy7sP7sc022URlTsYAxUmV129EcyUXMF_mYfbJd9EvY1y5ThNz7PxIy6d0i9IwD_5OBj96X4RN9SZCd8qRivQgWIFsu0ymlVA&oh=810dfcb2a9efb4ac1d5c4f9070ffc00d&oe=5B27CD21"  class="img-thumbnail">
+  </div>
     
   </div>
   </div>
@@ -110,20 +118,21 @@
 </div><br><br>
 
 
-<form action="/co_list" method ="post" class = "form-inline">
 
 
 
 
-<div class="container-fluid">
+<div class="container bs-docs-container">
+<div class="row">
+<div class="col-md-11">
  
   <div class="row">
      <div class="col-md-2"> ประเภทผู้ใช้งาน</div>
-     <div class="col-md-4"> <input type="radio" name="user_type" value="1"  id ='type1' onchange="type_S1(this.id,'type_S2')" >นักเรียน&emsp;
-                           <input type="radio" name="user_type" value="2"  id ='type2' onchange="type_S1(this.id,'type_S2')" >นักศึกษา&emsp;
-                           <input type="radio" name="user_type" value="3"   id ='type3' onchange="type_S1(this.id,'type_S2')" >ครู/อาจารย์<br>  </div>
+     <div class="col-md-4"> <input type="radio" name="user_type" value="1"  id ='type1' onchange="type_S1(this.id,'type_S2')" >&nbsp;นักเรียน&emsp;
+                           <input type="radio" name="user_type" value="2"  id ='type2' onchange="type_S1(this.id,'type_S2')" >&nbsp;นักศึกษา&emsp;
+                           <input type="radio" name="user_type" value="3"   id ='type3' onchange="type_S1(this.id,'type_S2')" >&nbsp;ครู/อาจารย์<br>  </div>
      <div class="col-md-2"> ประเภทนักศึกษา</div>
-     <select name="On_name"  class="form-control"  id ='type_S2' >
+     <select name="user_type_S"  class="form-control"  id ='type_S2' >
                                               <option value = "1" >เลือกเฉพาะนักศึกษา</option> 
                                               
                                               </select>
@@ -131,21 +140,35 @@
   </div><br><br>
   <!-- -----***___ประเภทผู้ใช้___***----- -->
 
+  <div class="row">
+  
+  <div class="col-md-2">รหัสนักศึกษา/อ้างอิง</div>
+     <div class="col-md-4"> <input type="text" name ="no_S" value = "" class = "form-control">   </div>
+     <div class="col-md-2">รหัสประจำตัวประชาชน</div>
+     <div class="col-md-4"> <input type="number" name ="no_P" value = "" class = "form-control">   </div>
+
+    
+  
+ 
+  </div><br><br>
+  <!-- -----***___รหัสน.ศ./อ้างอิง-รหัสประจำตัวปปช___***----- -->
+
    <div class="row">
   
      <div class="col-md-2"> ชื่อ-สกุล</div>
-     <div class="col-md-10">  <select name="On_name"  class="form-control" >
+     <div class="col-md-4">  <select name="On_name"  class="form-control" >
                                               <option value = "1" >นาย</option> 
                                               <option value = "2" >นางสาว</option> 
                                               <option value = "3">นาง</option> 
                                               </select>
-                              <input type="text" name ="find" value = "" class = "form-control">   </div>
-   
+                              <input type="text" name ="name" value = "" class = "form-control">   </div>
+     <div class="col-md-2"> ชื่อเล่น</div>
+     <div class="col-md-4"> <input type="text" name ="nickname" value = "" class = "form-control">   </div>
+
     
  
   </div><br><br>
-  <!-- -----***___ชื่อผู้ใช้___***----- -->
-
+  <!-- -----***___ชื่อผู้ใช้/ชื่อเล่น___***----- -->
 
   <div class="row">
                        <div class="col-md-2">  <label for="B_date"><b>วัน/เดือน/ปี เกิด</b></label></div>
@@ -153,23 +176,28 @@
                        <div class="col-md-3"> <div class="panel panel-default"><div class="panel-body">  <label for="B_date"><b>อายุ</b>&emsp; <b id="FBday" >โปรดกรอกวันเกิด</b> </label></div></div></div>
                        <div class="col-md-3"></div>
                       
-                    </div> <br><br>
+                    </div> <br>
 <!-- -----***___วันเกิด___***----- -->
 
 <div class="row">
   
   <div class="col-md-2"> สถาบันการศึกษา</div>
-  <div class="col-md-10">  <select name="On_name"  class="form-control" >
+  <div class="col-md-4">  <select name="school"  class="form-control" >
                                            <option value = "" >โปรดเลือกสถาบัน</option> 
                                            <option value = "1" >มรภ.ราชภัฏอุบล</option> 
                                            
                                            </select>
                              </div>
-
- 
+  <div class="col-md-2"> Learning Style</div>
+  <div class="col-md-4"><label class="checkbox-inline"> 
+                                               <label class="checkbox-inline"> <input type="checkbox" name="L_Style1" value="1">V &emsp;</label> 
+                                               <label class="checkbox-inline"> <input type="checkbox" name="L_Style2" value="1">A &emsp;</label> 
+                                               <label class="checkbox-inline"> <input type="checkbox" name="L_Style3" value="1">R &emsp;</label>
+                                               <label class="checkbox-inline"> <input type="checkbox" name="L_Style4" value="1">K &emsp;</label></div>
+  
 
 </div><br><br>
-<!-- -----***___สถาบัน___***----- -->
+<!-- -----***___สถาบัน/Learning Style___***----- -->
 
 <div class="row">
   
@@ -202,15 +230,28 @@
 </div><br><br>
 <!-- -----***___คณะ+สาขา___***----- -->
 
-<div class="row">
+ <div class="row">
+  
+  <div class="col-md-2">ชั้นปี</div>
+     <div class="col-md-4"> <input type="number" name ="year_U" value = "" class = "form-control">   </div>
+     <div class="col-md-2">เกรดเฉลี่ย</div>
+     <div class="col-md-4"> <input type="number" name ="scroll_U" value = "" class = "form-control">   </div>
+
+    
+  
+ 
+  </div><br><br>
+  <!-- -----***___ชั้นปี/เกรด___***----- -->
+
+  <div class="row">
      <div class="col-md-2">สถานภาพ</div>
-     <div class="col-md-4"> <select name="On_name"  class="form-control" >
+     <div class="col-md-4"> <select name="marital_S"  class="form-control" >
                                               <option value = "1" >โสด</option> 
                                               <option value = "2" >แต่งงาน</option> 
                                               <option value = "3" >ม่าย</option> 
                                               </select>  </div>
     <div class="col-md-2">หมู่เลือด</div>
-    <div class="col-md-4"> <select name="On_name"  class="form-control" >
+    <div class="col-md-4"> <select name="blood"  class="form-control" >
                                               <option value = "" >โปรดเลือกหมู่เลือด</option> 
                                               <option value = "O" >O</option> 
                                               <option value = "A" >A</option> 
@@ -221,16 +262,42 @@
     
  
   </div><br><br>
-  <!-- -----***___สถานภาพ___***----- -->
+  <!-- -----***___สถานภาพ/หมู่เลือด___***----- -->
 
+   <div class="row">
 
+   <div class="col-md-2">เพศ</div>
+     <div class="col-md-2">  <select name="gender"  class="form-control" >
+                                           <option value = "" >โปรดเลือกเพศ</option> 
+                                           <option value = "1" >ชาย</option> 
+                                           <option value = "2" >หญิง</option> 
+                                           <option value = "3" >เพศทางเลือก</option> 
+                                           
+                                           </select> </div>
   
+     <div class="col-md-1">น้ำหนัก</div>
+     <div class="col-md-3"> <input type="number" name ="weight" value = "" class = "form-control">   </div>
+     <div class="col-md-1">ส่วนสูง</div>
+     <div class="col-md-3"> <input type="number" name ="height" value = "" class = "form-control">   </div>
+
+    
+  
+ 
+  </div><br><br>
+  <!-- -----***___น้ำหนัก/ส่วนสูง/เพศ___***----- -->
+
 
   <div class="row">
-     <div class="col-md-2">เชื้อชาติ</div>
-     <div class="col-md-4"> <input type="text" name ="find" value = "" class = "form-control">  </div>
-     <div class="col-md-2">สัญชาติ</div>
-     <div class="col-md-4"> <input type="text" name ="find" value = "" class = "form-control">  </div>
+     <div class="col-md-2">ศาสนา</div>
+     <div class="col-md-2"> <select name="religion"  class="form-control" >
+                                              <option value = "1" >ศาสนาพุธ</option> 
+                                              <option value = "2" >ศาสนาคริสต์</option> 
+                                              <option value = "3" >ไม่ระบุ</option> 
+                                              </select>  </div>
+     <div class="col-md-1">เชื้อชาติ</div>
+     <div class="col-md-3"> <input type="text" name ="nationality" value = "" class = "form-control">  </div>
+     <div class="col-md-1">สัญชาติ</div>
+     <div class="col-md-3"> <input type="text" name ="citizen" value = "" class = "form-control">  </div>
    
     
  
@@ -238,20 +305,70 @@
   <!-- -----***___เชื้อชาติ/สัญชาติ___***----- -->
 
   <div class="row">
-     <div class="col-md-2">ศาสนา</div>
-     <div class="col-md-10"> <select name="On_name"  class="form-control" >
-                                              <option value = "1" >ศาสนาพุธ</option> 
-                                              <option value = "2" >ศาสนาคริสต์</option> 
-                                              <option value = "3" >ไม่ระบุ</option> 
-                                              </select>  </div>
+  <div class="col-md-2">ที่อยู่ตามภูมิลำเนา</div>
+  <div class="col-md-10"><textarea class="form-control" name = "address_Pe" rows="3" cols="100"></textarea></div> 
+ 
+  </div><br><br>
+  <!-- -----***___ที่อยู่ตามภูมิลำเนา___***----- -->
+
+
+  <div class="bs-docs-section" data-example-id="textarea-form-control">
+  <div class="row">
+  <div class="col-md-2">ที่อยู่ปัจจุบัน</div>
+  <div class="col-md-10"><textarea class="form-control" name = "address_Pr" rows="3" cols="100" ></textarea></div>
    
     
  
-  </div><br><br>
-  <!-- -----***___ศาสนา___***----- -->
+  </div></div><br><br>
+  <!-- -----***___ที่อยู่ปัจจุบัน___***----- -->
 
-
+   <div class="row">
   
+  <div class="col-md-2">เบอร๋โทรศัพท์</div>
+     <div class="col-md-4"> <input type="number" name ="no_number" value = "" class = "form-control">   </div>
+     <div class="col-md-2">มือถือ</div>
+     <div class="col-md-4"> <input type="number" name ="no_phon" value = "" class = "form-control">   </div>
+
+    
+  
+ 
+  </div><br><br>
+  <!-- -----***___เบอร๋โทรศัพท์/มือถือ___***----- -->
+
+    <div class="row">
+  
+  <div class="col-md-2">E-mail</div>
+     <div class="col-md-4"> <input type="name" name ="email" value = "" class = "form-control">   </div>
+     <div class="col-md-2">Facebook/Line</div>
+     <div class="col-md-4"> <input type="name" name ="face_line" value = "" class = "form-control">   </div>
+
+    
+  
+ 
+  </div><br><br>
+  <!-- -----***___facebook/line-e_mail___***----- -->
+
+    <div class="row">
+     <div class="col-md-2">Web site</div>
+     <div class="col-md-10"> <input type="name" name ="web_S" value = "" class = "form-control">   </div>
+
+    
+  
+ 
+  </div><br><br>
+  <!-- -----***___Web site___***----- -->
+
+   <div class="row">
+                            <div class="col-md-12">    <button type="submit" class="btn btn-success"><span class ="glyphicon glyphicon-ok">บันทึก</span></button>&emsp;&emsp;
+                                                      <a href = "/list_users" class="btn btn-danger" >  <span class ="glyphicon glyphicon-remove" >ยกเลิก</span></a></div>
+                                           
+                    </div> 
+                     
+                   
+                    <!--Last/\ /*********************************************************************\ -->
+
+
+
 
   </div> <br>
 
@@ -260,13 +377,10 @@
 
 
 
-<a href="/co_title_reg" class="btn btn-success" ><span class ="glyphicon glyphicon-plus"></span>เพิ่มรายการ</a>&emsp;&emsp;
 
-     <input type="text" name ="find" value = "" class = "form-control">  
-       <button type="submit" class="btn btn-primary"><span class ="glyphicon glyphicon-search">ค้นหา</span></button>
-      </div> 
-    
-    
+ </div> 
+    </div>
+    </div>
 </form>
 
 

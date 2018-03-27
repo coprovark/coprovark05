@@ -32,7 +32,7 @@
 </table>
 <table border="1" width="100%"
 <tr>
-    <td align="center" width="15%" height="30">ประเภทผู้ใช้งาน</td>
+    <td align="" width="15%" height="30">ประเภทผู้ใช้งาน</td>
     <td>
     <div class="form-group">
     <div class="form-inline" style="width:100%"> <br>
@@ -46,7 +46,7 @@
 </table>
 <table border="1" width="100%"
 <tr>
-    <td align="center" width="15%" height="30">รหัสนักศึกษา/อ้างอิง</td>
+    <td align="" width="15%" height="30">รหัสนักศึกษา/อ้างอิง</td>
     <td><input teype="text" name="resume_no" size="41"></td>
     <td width="25%" height="">เลขที่บัตรประจำตัวประชาชน</td>
     <td width="30%" height=""> <input teype="text" name="resume_no" size="41"></td>
@@ -55,7 +55,7 @@
 </table>
 <table border="1" width="100%"
 <tr>
-    <td align="center" width="15%" height="30">ชื่อ-สกุล</td>
+    <td align="" width="15%" height="30">ชื่อ-สกุล</td>
     <td width="40%" height=""><input teype="text" name="resume_no" size="56.5"></td>
     <td width="15%" height="">ชื่อเล่น </td>
     <td width="40%" height=""><input teype="text" name="resume_no" size="41"></td>
@@ -64,7 +64,7 @@
 </table>
 <table border="1" width="100%"
 <tr>
-    <td align="center" width="15%" height="30">สาขาวิชา</td>
+    <td align="" width="15%" height="30">สาขาวิชา</td>
     <td width="40%" height="">
     <div class="col-sm-10">
     <div class="form-inline" style="width:100%">
@@ -91,7 +91,7 @@
 </table>
 <table border="1" width="100%"
 <tr>
-    <td align="center" width="15%" height="30">ชั้นปี</td>
+    <td align="" width="15%" height="30">ชั้นปี</td>
     <td width="10%" height="30"><input teype="text" name="resume_no" size="10"></td>
     <td width="20%" height="30">เกรดเฉลี่ย</td>
     <td width="10%" height="30"><input teype="text" name="resume_no" size="10"></td>
@@ -112,7 +112,7 @@
 </table>
 <table border="1" width="100%"
 <tr>
-    <td align="center" width="15%" height="30">ประเภทนักศึกษา</td>
+    <td align="" width="15%" height="30">ประเภทนักศึกษา</td>
     <td width="40%" height="30"
     <div class="form-group">
     <div class="form-inline" style="width:200%"> <br>
@@ -129,7 +129,7 @@
 </table>
 <table border="1" width="100%"
 <tr>
-    <td align="center" width="15%" height="30">วัน/เดือน/ปีเกิด</td>
+    <td align="" width="15%" height="30">วัน/เดือน/ปีเกิด</td>
     <td width="10%" height="30">
     <input class="form-control" type="text" id="formGroupInputLarge" placeholder="วว/ดด/ปปป" style="width:100%">
     </td>
@@ -152,7 +152,7 @@
 </table>
 <table border="1" width="100%"
 <tr>
-    <td align="center" width="15%" height="30">น้ำหนัก Weight</td>
+    <td align="" width="15%" height="30">น้ำหนัก Weight</td>
     <td width="10%" height="30">
     <input class="form-control" type="text" id="formGroupInputLarge" placeholder="น้ำหนัก" style="width:100%">
     </td>
@@ -176,7 +176,7 @@
 </table>
 <table border="1" width="100%"
 <tr>
-    <td align="center" width="15%" height="30">สถานภาพ Marital Status</td>
+    <td align="" width="15%" height="30">สถานภาพ Marital Status</td>
     <td>
     <div class="form-group">
     <div class="form-inline" style="width:200%"> <br>
@@ -194,7 +194,7 @@
 </table>
 <table border="1" width="100%"
 <tr>
-    <td align="center" width="8.3%" height="30">เชื้อชาติ Nationality</td>
+    <td align="" width="8.3%" height="30">เชื้อชาติ Nationality</td>
     <td width="3%" height=""><input teype="text" name="resume_no" size="53"></td>
     <td width="8.5%" height="">ศาสนา Religion</td>
     <td width="9%" height=""><input teype="text" name="resume_no" size="30"></td>
@@ -203,7 +203,7 @@
 </table>
 <table border="1" width="100%"
 <tr>
-    <td align="center" width="15%" height="50">ที่อยู่ตามภูมิลำเนา <br>Permanent Address</td>
+    <td align="" width="15%" height="50">ที่อยู่ตามภูมิลำเนา <br>Permanent Address</td>
     <td>
     <div class="form-group">
     <div class="col-sm-10">
@@ -217,7 +217,7 @@
 </table>
 <table border="1" width="100%"
 <tr>
-    <td align="center" width="15%" height="50">ที่อยู่ปัจจุบัน<br>Present Address</td>
+    <td align="" width="15%" height="50">ที่อยู่ปัจจุบัน<br>Present Address</td>
     <td>
     <div class="form-group">
     <div class="col-sm-10">
@@ -231,7 +231,7 @@
 </table>
 <table border="1" width="100%"
 <tr>
-    <td align="center" width="8.3%" height="30">เบอร์โทรศัพท์</td>
+    <td align="" width="8.3%" height="30">เบอร์โทรศัพท์</td>
     <td width="3%" height=""><input teype="text" name="resume_no" size="53"></td>
     <td width="8.5%" height="">มือถือ Mobile</td>
     <td width="9%" height=""><input teype="text" name="resume_no" size="30"></td>
@@ -240,7 +240,7 @@
 </table>
 <table border="1" width="100%"
 <tr>
-    <td align="center" width="8.3%" height="30">E-mail</td>
+    <td align="" width="8.3%" height="30">E-mail</td>
     <td width="3%" height=""><input teype="text" name="resume_no" size="53"></td>
     <td width="8.5%" height="">Facebook/Line</td>
     <td width="9%" height=""><input teype="text" name="resume_no" size="30"></td>
@@ -250,7 +250,7 @@
 </table>
 <table border="1" width="100%"
 <tr>
-    <td align="center" width="10%" height="30">Web site</td>
+    <td align="" width="10%" height="30">Web site</td>
     <td width="9%" height=""><input teype="text" name="resume_no" size="120"></td>
     </td>
 </tr>

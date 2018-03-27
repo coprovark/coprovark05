@@ -214,3 +214,5 @@ Route::get('/co_institute_reg', function () { return view('page.coprovark_begin.
 //---institute--
 
 Route::get('/M_co_resume', function () { return view('page.coprovark_begin.M_co_resume');  });
+
+Route::post('/M_co_save','UsersController@M_co_save' );
