@@ -178,7 +178,7 @@ if ($register->ID_S!="" and $register->On_name!="" and $register->Nameands_S!=""
        
 $status = DB::table('resume')->insert(
 [
-  'sid'        => $register->ID_S,
+  ''        => $register->ID_S,
   'titleName'  => $register->On_name,
   'fullName'   => $register->Nameands_S,
   'gender'     => $register->Gender_S,

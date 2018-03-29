@@ -216,3 +216,17 @@ Route::get('/co_institute_reg', function () { return view('page.coprovark_begin.
 Route::get('/M_co_resume', function () { return view('page.coprovark_begin.M_co_resume');  });
 
 Route::post('/M_co_save','UsersController@M_co_save' );
+
+
+
+//------Upload File-----------------------------------------
+// Route::get('/upload1', function () {
+//     return view('file.upload');
+// });
+Route::get('/upload1','FileController@show');
+Route::post('/upload1','FileController@upload');//upload
+Route::get('/dl/{path}/{name}','FileController@dl');//download
+Route::get('/rm/{ID}','FileController@rm');//ddelete
+
+Route::get('/ed/{ID}','FileController@ed');//edit_pic
+Route::post('/update_ed','FileController@upload_ed');//update--edit
