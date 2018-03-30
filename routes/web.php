@@ -230,3 +230,10 @@ Route::get('/rm/{ID}','FileController@rm');//ddelete
 
 Route::get('/ed/{ID}','FileController@ed');//edit_pic
 Route::post('/update_ed','FileController@upload_ed');//update--edit
+
+
+//----^^^^เล้าpic------
+
+//VVVเล้า Gallery
+
+Route::get('/Gallery','FileController@gallery_show');

@@ -101,7 +101,7 @@
      <div class="col-md-5">เลขที่ No.</div>
       <div class="col-md-7"><input type="text" name ="on_U" value = "" class = "form-control"></div></div> <br>
   <div class="row">
-      <div class="col-md-5">วันที่ Date.</div> 
+      <div class="col-md-5">00000วันที่ Date.</div> 
       <div class="col-md-7"><input type="text" name ="date_U" value = "" class = "form-control"> </div></div>          
                     
         </label></div>
@@ -237,7 +237,7 @@
      <div class="col-md-2">เกรดเฉลี่ย</div>
      <div class="col-md-4"> <input type="number" name ="scroll_U" value = "" class = "form-control">   </div>
 
-    
+
   
  
   </div><br><br>

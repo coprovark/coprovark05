@@ -47,7 +47,7 @@ class FileController extends Controller
                     'FileName' => $name, 
                     'FileType' => $type, 
                     'FilePath' => $namefile, 
-                    'FileSize' => $size/1024, // -> KB 
+                    'FileSize' => round($size/1024,2), // -> KB 
                 ]
             );
  
@@ -86,7 +86,7 @@ class FileController extends Controller
                     'FileName' => $name, 
                     'FileType' => $type, 
                     'FilePath' => $namefile, 
-                    'FileSize' => $size/1024, // -> KB   
+                    'FileSize' => round($size/1024,2), // -> KB ,2 8nvmLobp, 2 ทดศนิยม 2 ตำแหน่ง   
             
             
                     ]);
@@ -113,5 +113,19 @@ class FileController extends Controller
     }
 
   
+
+
+
+
+    //-------------vvvvv------------------gallery controller
+
+    public function gallery_show(){
+        $query = DB::table('gallery')->select('*')->get();
+        return view('file.Gallery_page',[
+            'datatable' => $query,
+            
+            'i' => 1
+        ]);
+    }
 
 }//end class
