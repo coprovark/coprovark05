@@ -3,7 +3,11 @@
 @section('title', 'Page Title')
 
 @section('content')
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+
+
 
     
 
@@ -13,6 +17,7 @@
    <div class="container-fluid">
   
   <div class="row">
+ 
      <div class="col-md-3">
 
      @if(count($edit) == 0 )
@@ -50,9 +55,12 @@
 
 
 <div class="col-md-9">
+<button class="btn btn-danger" onclick="getID()" >Delete All</button>
 <table border="1" width="100%">
     <thead>
         <tr>
+            <th> <input type="checkbox" name="L_food4"  id="itemall"></th>
+ 
             <th>#</th>
             <th>ชื่อไฟล์</th>
             <th>ประเภทไฟล์</th>
@@ -63,6 +71,7 @@
     <tbody>
     @foreach($datatable as $row)
         <tr>
+        <td><input type="checkbox" name="L_food4" value="{{$row->ID}}" class="item"></td>
             <td>
                 @if($row->FileType == 'jpeg' || $row->FileType == 'png')
                     <img src="{{ asset('upload/'.$row -> FilePath)}}" width="60px">
@@ -114,6 +123,44 @@
     $("#pathphoto").change(function() {
         readURL(this);
     });
+
+
+		$('#itemall').click(function(){
+			if($('#itemall').is(':checked')){
+				$(".item").prop('checked', true);
+			}else{
+				$(".item").prop('checked', false);
+			}
+		});
+
+
+     function getID(){
+			var final = [];
+			$('.item:checked').each(function(){        
+			    var values = $(this).val();
+			    final.push(values);
+			});
+            //console.log(final);
+
+
+            	//send data to server
+			$.ajax({
+				url: 'api/delete',
+				type: 'POST',
+				dataType: 'json',
+				data: {param: final},
+			})
+			.done(function(res) {
+                location.reload();
+							});
+
+        }
+
+
+
+
+
+
 
 </script>
 

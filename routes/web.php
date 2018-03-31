@@ -231,9 +231,14 @@ Route::get('/rm/{ID}','FileController@rm');//ddelete
 Route::get('/ed/{ID}','FileController@ed');//edit_pic
 Route::post('/update_ed','FileController@upload_ed');//update--edit
 
+//30/3vvลบcheckbox
+Route::post('/api/delete','FileController@deleteItem');//deleteall
+
 
 //----^^^^เล้าpic------
 
 //VVVเล้า Gallery
 
 Route::get('/Gallery','FileController@gallery_show');
+
+

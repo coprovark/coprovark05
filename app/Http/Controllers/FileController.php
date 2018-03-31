@@ -30,6 +30,21 @@ class FileController extends Controller
             }
         }
         return redirect('upload1'); 
+       
+        // return redirect('upload1'); 
+    }
+
+    public function deleteItem(Request $req){
+        $item = $req->param;
+        foreach ($item as $value) {
+            $query = DB::table('file')->where('ID','=',$value)->get();
+            foreach($query as $row){
+                if(@unlink('upload/'.$row->FilePath)){
+                    DB::table('file')->where('ID','=',$value)->delete();
+                }
+            }
+        }
+        return response()->json($item);
     }
 
     public function upload(Request $req){
